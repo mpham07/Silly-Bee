@@ -27,7 +27,7 @@ public class GameSpawnStuffController : MonoBehaviour {
 	private void vodSpawnFlower()
 	{
 		Invoke ("vodSpawnFlower", Random.Range (minSpawnTime, maxSpawnTime));
-		int spawnFlowerNum = randNoSame (0, flowerPrefabs.Length, ref this.flowerNumOld);
+		int spawnFlowerNum = randNoSame (0, flowerPrefabs.Length - 1, ref this.flowerNumOld);
 		string nameFlower = getNameFlower (spawnFlowerNum);
 	
 		Vector3 newPos = GameObject.Find(nameFlower).transform.position;

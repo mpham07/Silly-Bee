@@ -39,6 +39,7 @@ public class JarController : MonoBehaviour {
 		else if (other.CompareTag ("flower1")) return TypeFlower.FLOWER1;
 		else if (other.CompareTag ("flower2")) return TypeFlower.FLOWER2;
 		else if (other.CompareTag ("flower3")) return TypeFlower.FLOWER3;
+		else if (other.CompareTag ("flower4")) return TypeFlower.FLOWER4;
 		return TypeFlower.NONE;
 	}
 }
