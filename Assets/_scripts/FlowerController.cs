@@ -32,7 +32,7 @@ public class FlowerController : MonoBehaviour {
 			Vector3 target = moveDirection * moveSpeed + currentPosition;
 			transform.position = Vector3.Lerp( currentPosition, target, Time.deltaTime);
 
-			transform.localScale -= new Vector3(0.01f, 0.01f, 0);
+			transform.localScale -= new Vector3(0.005f, 0.005f, 0);
 		}
 	}
 
