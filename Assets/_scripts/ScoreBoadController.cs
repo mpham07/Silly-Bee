@@ -9,7 +9,8 @@ public class ScoreBoadController : MonoBehaviour {
 	public Text txtScoreUnderJar;
 	public Text txtScoreAboveBestScore;
 	public Text txtScoreBest;
-	public Button btnStart;
+
+	public Button btnPlayAgain;
 
 	private float fScoreUnderJar;
 	private float fScoreAboveBestScore;
@@ -21,6 +22,7 @@ public class ScoreBoadController : MonoBehaviour {
 	private bool isAllowUpdateTextCore = false;
 	
 	void Start() {
+		//PlayerPrefs.SetInt("score", 1);
 		this.readScoreFromFile ();
 		this.disableBtns ();
 	}
@@ -52,8 +54,8 @@ public class ScoreBoadController : MonoBehaviour {
 			else {
 				this.fScoreAboveBestScore = this.fScoreTemp;
 				if(this.fScoreTemp > this.iScoreBest) {
-					this.writeScoreToFile();
-
+					this.writeScoreToFile ();
+					this.readScoreFromFile ();
 				}
 			}
 			this.txtScoreAboveBestScore.text = ((int)this.fScoreAboveBestScore).ToString();
@@ -73,11 +75,11 @@ public class ScoreBoadController : MonoBehaviour {
 	}
 
 	public void disableBtns() {
-		this.btnStart.interactable = false;
+		this.btnPlayAgain.interactable = false;
 	}
 
 	public void enableBtns() {
-		this.btnStart.interactable = true;
+		this.btnPlayAgain.interactable = true;
 	}
 
 	private void writeScoreToFile() {
