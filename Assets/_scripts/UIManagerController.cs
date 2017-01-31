@@ -46,4 +46,16 @@ public class UIManagerController : MonoBehaviour {
 	public void btnStartGameAgain_Click() {
 		Application.LoadLevel (Application.loadedLevel);
 	}
+
+	public void btnRating_Click() {
+		#if UNITY_ANDROID
+			Application.OpenURL("market://details?id=YOUR_ID");
+		#elif UNITY_IPHONE
+		Application.OpenURL("itms-apps://itunes.apple.com/app/id1180381806");
+	    #endif
+	}
+
+	public void btnShowFB_Click() {
+		Application.OpenURL ("https://www.facebook.com/sillybeefun/");
+	}
 }
