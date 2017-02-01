@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
+
 
 public class UIManagerController : MonoBehaviour {
 	public Animator animBtnStart;
 	public Animator pnlScoreBoard;
+	public Animator pnlInstructionBoard;
+
+	private bool isQuestionMark_click = false;
+
 	//public Animator bee;
 	private GameController gameController;
 
@@ -15,6 +20,27 @@ public class UIManagerController : MonoBehaviour {
 	void Start() {
 		this.gameController = GameObject.FindWithTag ("GameController")
 			.GetComponent<GameController> ();
+	}
+
+	public void btnInstruction_Click() {
+		if (!this.isQuestionMark_click) {
+			
+			this.isQuestionMark_click = true;
+			this.showInstructionBoard (true);
+		} else {
+			
+			this.isQuestionMark_click = false;
+			this.showInstructionBoard (false);
+		}
+	}
+
+	public void showInstructionBoard(bool value) {
+		if (value) {
+			pnlInstructionBoard.enabled = true;
+			pnlInstructionBoard.SetBool ("isGetIn", true);
+		}else {
+			pnlInstructionBoard.SetBool("isGetIn", false);
+		}
 	}
 
 	public void showScoreBoard(bool value)
@@ -49,9 +75,9 @@ public class UIManagerController : MonoBehaviour {
 
 	public void btnRating_Click() {
 		#if UNITY_ANDROID
-			Application.OpenURL("market://details?id=YOUR_ID");
+			Application.OpenURL("market://details?id=id=minh.mtpro.beebee");
 		#elif UNITY_IPHONE
-		Application.OpenURL("itms-apps://itunes.apple.com/app/id1180381806");
+			Application.OpenURL("itms-apps://itunes.apple.com/app/id1180381806");
 	    #endif
 	}
 
