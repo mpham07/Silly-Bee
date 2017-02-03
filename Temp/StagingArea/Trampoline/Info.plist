@@ -32,6 +32,8 @@
       <key>NSAllowsArbitraryLoads</key>
       <true />
     </dict>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Everyplay requires access access to calendars for nothing!</string>
     <key>UIApplicationExitsOnSuspend</key>
     <false />
     <key>UIPrerenderedIcon</key>

@@ -82,12 +82,12 @@ struct Animator_t69676727;
 #include "UnityEngine_UnityEngine_Object1021602117.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_admob_Admob546240967.h"
 #include "mscorlib_System_String2029220233.h"
-#include "mscorlib_System_Boolean3825574718.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_admob_AdSize3770813302.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_admob_AdSize3770813302MethodDeclarations.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_admob_AdPosition1947228246.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_admob_AdPosition1947228246MethodDeclarations.h"
 #include "mscorlib_System_Int322071877448.h"
+#include "mscorlib_System_Boolean3825574718.h"
 #include "AssemblyU2DCSharp_BackgroundRepeater3511017664.h"
 #include "AssemblyU2DCSharp_BackgroundRepeater3511017664MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Camera189460977MethodDeclarations.h"
@@ -273,9 +273,6 @@ extern "C"  void AdManager_Start_m2207418645 (AdManager_t1644758224 * __this, co
 		String_t* L_3 = __this->get_videoID_4();
 		NullCheck(L_1);
 		Admob_initAdmob_m1941857206(L_1, L_2, L_3, /*hidden argument*/NULL);
-		Admob_t546240967 * L_4 = Admob_Instance_m352023099(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_4);
-		Admob_setTesting_m4242041198(L_4, (bool)1, /*hidden argument*/NULL);
 		return;
 	}
 }
