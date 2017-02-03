@@ -50,7 +50,8 @@ public class UIManagerController : MonoBehaviour {
 			pnlScoreBoard.SetBool("isHidden", false);
 
 			//Start an bannerAd when ending game
-		 AdManager.Instance.ShowBanner (); 
+		AdManager.Instance.ShowBanner (); 
+		AdManager.Instance.initLoadInterstitial ();
 		}else {
 			pnlScoreBoard.SetBool("isHidden", true);
 		}
@@ -71,6 +72,7 @@ public class UIManagerController : MonoBehaviour {
 
 	public void btnStartGameAgain_Click() {
 		Application.LoadLevel (Application.loadedLevel);
+		AdManager.Instance.showVideoAd ();
 	}
 
 	public void btnRating_Click() {

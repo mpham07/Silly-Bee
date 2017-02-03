@@ -15,12 +15,20 @@ public class AdManager : MonoBehaviour {
 		#if UNITY_EDITOR
 		#elif UNITY_IPHONE
 		Admob.Instance ().initAdmob (bannerID, videoID);
-		//Admob.Instance ().loadInterstitial ();
+	
 		#elif UNITY_ANDROID
 		Admob.Instance ().initAdmob (bannerID, videoID);
-		//Admob.Instance ().loadInterstitial ();
 		#endif
-		//Admob.Instance().setTesting(true);
+		Admob.Instance().setTesting(true);
+	}
+
+	public void initLoadInterstitial() {
+		#if UNITY_EDITOR
+		#elif UNITY_IPHONE
+		Admob.Instance ().loadInterstitial ();
+		#elif UNITY_ANDROID
+		Admob.Instance ().loadInterstitial ();
+		#endif
 	}
 
 	public void ShowBanner() {
