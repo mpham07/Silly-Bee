@@ -19,7 +19,7 @@ public class AdManager : MonoBehaviour {
 		#elif UNITY_ANDROID
 		Admob.Instance ().initAdmob (bannerID, videoID);
 		#endif
-		Admob.Instance().setTesting(true);
+		//Admob.Instance().setTesting(true);
 	}
 
 	public void initLoadInterstitial() {
