@@ -77,7 +77,7 @@ public class UIManagerController : MonoBehaviour {
 
 	public void btnRating_Click() {
 		#if UNITY_ANDROID
-			Application.OpenURL("market://details?id=id=minh.mtpro.beebee");
+		Application.OpenURL("http://play.google.com/store/apps/details?id=minh.mtpro.beebee");
 		#elif UNITY_IPHONE
 			Application.OpenURL("itms-apps://itunes.apple.com/app/id1180381806");
 	    #endif
